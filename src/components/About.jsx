@@ -38,10 +38,55 @@ const About = () => {
       degree: 'Advanced Level in Information Technology',
       institution: 'St. Joseph\'s College, Colombo 10',
       year: '2019'
+    },
+    {
+      degree: 'Certificate Course in Applied Information Technology',
+      institution: 'Sri Lanka Telecom',
+      year: '2018'
     }
   ];
 
   const clubsAndSocieties = [
+    {
+      name: 'Interact: Rotary Sponsored Club',
+      role: 'Member',
+      description: 'Participating in community service projects and events during the School years.'
+    },
+    {
+      name: 'General Knowledge Club of St Josephs College',
+      role: 'Board Member',
+      description: 'Contributing to organizing and hosting general knowledge competitions and events.'
+    },
+    {
+      name: 'Commerce Union of St Josephs College',
+      role: 'Member',
+      description: 'Participating in business-related activities and initiatives to foster commerce education.'
+    },
+    {
+      name: 'ZeroPlastic Movement of University of Vavuniya',
+      role: 'Member',
+      description: 'Promoting sustainability and environmental awareness by reducing plastic waste on campus.'
+    },
+    {
+      name: 'IEEE Student Branch of University of Vavuniya',
+      role: 'Member',
+      description: 'Engaging in tech-related activities, workshops, and events organized by IEEE for students.'
+    },
+    {
+      name: 'ITCS | Information Technology & Computing Society',
+      role: 'Member',
+      description: 'Participating in tech events, hackathons, and projects aimed at improving IT skills and knowledge.'
+    },
+    {
+      name: 'Sri Lanka University Catholic Students Movement (SLUCSM)',
+      role: 'Committee Member',
+      description: 'Involved in organizing faith-based activities and providing a supportive community for Catholic students.'
+    },
+    {
+      name: 'AIESEC in University of Vavuniya',
+      role: 'Committee Member',
+      description: 'Contributing to leadership development programs and international exchange opportunities for students.'
+    },
     {
       name: 'Christian Society',
       role: 'President',
@@ -54,11 +99,14 @@ const About = () => {
     }
   ];
 
+
   const extracurricularActivities = [
     'Volunteer at local community events',
     'Member of the university sports team',
-    'Photography and content creation'
+    'Photography and content creation',
+    'Designing posts and other creative materials ',
   ];
+  
 
   return (
     <div className="container mx-auto px-4" ref={ref}>
@@ -84,7 +132,7 @@ const About = () => {
             <img src="/src/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
           </div>
           <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/src/assets/anotherImage.jpg" alt="Another Image" className="w-full h-full object-cover" />
+            <img src="/src/assets/profile2.jpg" alt="Another Image" className="w-full h-full object-cover" />
           </div>
         </motion.div>
 
