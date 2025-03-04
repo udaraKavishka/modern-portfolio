@@ -18,7 +18,7 @@ const Hero = () => {
                 Hi, I'm <span className="text-primary-600">Udara Nalawansa</span>
               </h1>
               <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-secondary-700">
-                Data Science Aspirant & Web Developer
+                Data Science Aspirant & Designer
               </h2>
               <p className="text-lg text-secondary-600 mb-8 max-w-lg">
                 Showcasing my passion for technology, innovation, and problem-solving through impactful projects.
