@@ -9,12 +9,34 @@ const Contact = () => {
     threshold: 0.1,
   });
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } ,reset} = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
-    // Here you would typically send the form data to your backend or a service like Formspree
-    alert('Message sent successfully!');
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('email', data.email);
+    formData.append('subject', data.subject);
+    formData.append('message', data.message);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xdkaqqnv', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+      if (response.ok) {
+        alert('Message sent successfully!');
+        reset();
+      } else {
+        alert('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Something went wrong. Please try again later.');
+    }
   };
 
   return (
@@ -41,7 +63,7 @@ const Contact = () => {
         >
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold mb-6 text-secondary-900">Contact Information</h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-primary-100 p-3 rounded-full mr-4">
@@ -54,7 +76,7 @@ const Contact = () => {
                   <a href="mailto:your.email@example.com" className="text-primary-600 hover:text-primary-700">your.email@example.com</a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-primary-100 p-3 rounded-full mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -66,7 +88,7 @@ const Contact = () => {
                   <a href="tel:+1234567890" className="text-primary-600 hover:text-primary-700">+1 (234) 567-890</a>
                 </div>
               </div>
-              
+
               <div className="flex items-start">
                 <div className="bg-primary-100 p-3 rounded-full mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,7 +102,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-8">
               <h4 className="text-lg font-medium text-secondary-900 mb-4">Connect with me</h4>
               <div className="flex space-x-4">
@@ -117,7 +139,6 @@ const Contact = () => {
         >
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h3 className="text-2xl font-bold mb-6 text-secondary-900">Send Me a Message</h3>
-            
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-secondary-700 mb-1">
@@ -134,7 +155,7 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
                 )}
               </div>
-              
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-1">
                   Email
@@ -144,19 +165,19 @@ const Contact = () => {
                   id="email"
                   className={`form-input ${errors.email ? 'border-red-500' : ''}`}
                   placeholder="Your email"
-                  {...register('email', { 
+                  {...register('email', {
                     required: 'Email is required',
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                       message: 'Invalid email address',
-                    }
+                    },
                   })}
                 />
                 {errors.email && (
                   <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
                 )}
               </div>
-              
+
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-secondary-700 mb-1">
                   Subject
@@ -172,7 +193,7 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-600">{errors.subject.message}</p>
                 )}
               </div>
-              
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-1">
                   Message
@@ -188,7 +209,7 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>
                 )}
               </div>
-              
+
               <button
                 type="submit"
                 className="btn btn-primary w-full"
