@@ -73,6 +73,21 @@ const About = () => {
       </motion.div>
 
       <div className="flex flex-col items-center md:flex-row gap-12">
+        {/* Images Section on the Left */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="flex flex-col gap-4 items-center md:w-1/2"
+        >
+          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
+            <img src="/src/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
+            <img src="/src/assets/anotherImage.jpg" alt="Another Image" className="w-full h-full object-cover" />
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
@@ -136,21 +151,6 @@ const About = () => {
                 {skill}
               </span>
             ))}
-          </div>
-        </motion.div>
-
-        {/* Images Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col gap-4 items-center md:w-1/2"
-        >
-          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/src/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
-          </div>
-          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/src/assets/anotherImage.jpg" alt="Another Image" className="w-full h-full object-cover" />
           </div>
         </motion.div>
       </div>
