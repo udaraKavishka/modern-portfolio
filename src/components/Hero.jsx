@@ -54,7 +54,7 @@ const Hero = () => {
             >
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary-600 rounded-lg overflow-hidden flex items-center justify-center shadow-xl">
                 <img
-                  src="/src/assets/profile.jpg"
+                  src="/public/assets/profile.jpg"
                   alt="Your Image"
                   className="w-full h-full object-cover"
                 />
