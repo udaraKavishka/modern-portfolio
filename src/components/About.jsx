@@ -8,10 +8,56 @@ const About = () => {
     threshold: 0.1,
   });
 
-  const skills = [
-    'HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js', 
-    'Tailwind CSS', 'UI/UX Design', 'Responsive Design',
-    'Git', 'Figma'
+  const programmingLanguages = [
+    'C++', 'Java', 'JavaScript', 'Python', 'PHP', 'Shell Script', 'HTML5', 'CSS3'
+  ];
+
+  const frameworksAndLibraries = [
+    'React', 'Node.js', 'Express.js', 'Tailwind CSS', 'NumPy', 'Pandas', 'Matplotlib', 'Plotly'
+  ];
+
+  const databases = [
+    'MySQL', 'MongoDB', 'Oracle'
+  ];
+
+  const toolsAndTechnologies = [
+    'Git', 'NPM', 'Postman', 'Power Bi', 'JWT', 'Nodemon', 'Apache'
+  ];
+
+  const designTools = [
+    'Adobe Illustrator', 'Adobe InDesign', 'Adobe Photoshop', 'Adobe Lightroom Classic', 'Canva'
+  ];
+
+  const education = [
+    {
+      degree: 'Bachelor of Science in Information Technology',
+      institution: 'University of Jaffna',
+      year: 'Ongoing'
+    },
+    {
+      degree: 'Advanced Level in Information Technology',
+      institution: 'St. Joseph\'s College, Colombo 10',
+      year: '2019'
+    }
+  ];
+
+  const clubsAndSocieties = [
+    {
+      name: 'Christian Society',
+      role: 'President',
+      description: 'Leading and coordinating activities and events for the society at the University of Vavuniya.'
+    },
+    {
+      name: 'Gavel Club',
+      role: 'Member',
+      description: 'Engaging in public speaking and leadership training sessions.'
+    }
+  ];
+
+  const extracurricularActivities = [
+    'Volunteer at local community events',
+    'Member of the university sports team',
+    'Photography and content creation'
   ];
 
   return (
@@ -26,51 +72,145 @@ const About = () => {
         <div className="w-20 h-1 bg-primary-600 mx-auto"></div>
       </motion.div>
 
-      <div className="flex flex-col md:flex-row gap-12 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="md:w-1/2"
-        >
-          <div className="relative">
-            <div className="w-full h-80 md:h-96 bg-secondary-200 rounded-lg relative overflow-hidden">
-              {/* Replace with your actual image */}
-              <div className="absolute inset-0 flex items-center justify-center text-secondary-600 text-xl">
-                About Me Image
-              </div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 border-8 border-primary-500 rounded-lg z-0"></div>
-          </div>
-        </motion.div>
-
+      <div className="flex flex-col items-center md:flex-row gap-12">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="md:w-1/2"
         >
           <h3 className="text-2xl font-bold mb-4 text-secondary-900">Who I Am</h3>
           <p className="text-secondary-700 mb-6">
-            I'm a passionate web developer with a strong focus on creating intuitive and engaging user experiences. With over 5 years of experience in the field, I've worked on a variety of projects ranging from small business websites to complex web applications.
+            I'm Udara Kavishka Nalawansa, a dedicated student currently pursuing a Bachelor of Science in Information Technology at the University of Jaffna. Previously, I studied at St. Joseph's College, Colombo 10, where I built a strong academic foundation and a passion for continuous learning.
           </p>
           <p className="text-secondary-700 mb-6">
-            My approach combines technical expertise with creative problem-solving to deliver solutions that not only look great but also perform exceptionally well. I believe in clean, efficient code and staying up-to-date with the latest industry trends and technologies.
+            My focus lies in data analytics and data science, where I'm expanding my skills in database management, programming, and statistical analysis.
           </p>
-          
+
           <h3 className="text-2xl font-bold mb-4 text-secondary-900">My Skills</h3>
-          <div className="flex flex-wrap gap-2">
-            {skills.map((skill, index) => (
-              <span 
-                key={index} 
-                className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium"
-              >
+          {/* Programming Languages */}
+          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Programming Languages</h4>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {programmingLanguages.map((skill, index) => (
+              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {/* Frameworks & Libraries */}
+          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Frameworks & Libraries</h4>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {frameworksAndLibraries.map((skill, index) => (
+              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {/* Databases */}
+          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Databases</h4>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {databases.map((skill, index) => (
+              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {/* Tools & Technologies */}
+          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Tools & Technologies</h4>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {toolsAndTechnologies.map((skill, index) => (
+              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {/* Design Tools */}
+          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Design Tools</h4>
+          <div className="flex flex-wrap gap-2 mb-6">
+            {designTools.map((skill, index) => (
+              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
                 {skill}
               </span>
             ))}
           </div>
         </motion.div>
+
+        {/* Images Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="flex flex-col gap-4 items-center md:w-1/2"
+        >
+          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
+            <img src="/src/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
+            <img src="/src/assets/anotherImage.jpg" alt="Another Image" className="w-full h-full object-cover" />
+          </div>
+        </motion.div>
       </div>
+
+      {/* Education Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="mt-12"
+      >
+        <h3 className="text-2xl font-bold mb-4 text-secondary-900">Education</h3>
+        <div className="space-y-4">
+          {education.map((edu, index) => (
+            <div key={index} className="flex flex-col md:flex-row justify-between items-start bg-primary-50 p-4 rounded-lg shadow-md">
+              <div className="flex flex-col">
+                <span className="font-semibold text-secondary-900">{edu.degree}</span>
+                <span className="text-secondary-700">{edu.institution}</span>
+                <span className="text-secondary-500">{edu.year}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Clubs and Societies Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="mt-12"
+      >
+        <h3 className="text-2xl font-bold mb-4 text-secondary-900">Clubs and Societies</h3>
+        <div className="space-y-4">
+          {clubsAndSocieties.map((club, index) => (
+            <div key={index} className="flex flex-col md:flex-row justify-between items-start bg-primary-50 p-4 rounded-lg shadow-md">
+              <div className="flex flex-col">
+                <span className="font-semibold text-secondary-900">{club.name}</span>
+                <span className="text-secondary-700">{club.role}</span>
+                <span className="text-secondary-500">{club.description}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Extracurricular Activities Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="mt-12"
+      >
+        <h3 className="text-2xl font-bold mb-4 text-secondary-900">Extracurricular Activities</h3>
+        <ul className="list-disc pl-6 space-y-2 text-secondary-700">
+          {extracurricularActivities.map((activity, index) => (
+            <li key={index}>{activity}</li>
+          ))}
+        </ul>
+      </motion.div>
     </div>
   );
 };
