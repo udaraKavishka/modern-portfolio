@@ -55,7 +55,7 @@ function App() {
           duration={500}
           className={`${
             scrolled ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          } bg-primary-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 cursor-pointer hover:bg-primary-700`}
+          } bg-primary-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-110 hover:rotate-12`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
