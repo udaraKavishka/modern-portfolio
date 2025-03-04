@@ -129,10 +129,10 @@ const About = () => {
           className="flex flex-col gap-4 items-center md:w-1/2"
         >
           <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/public/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
+            <img src="/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
           </div>
           <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/public/assets/profile2.jpg" alt="Another Image" className="w-full h-full object-cover" />
+            <img src="/assets/profile2.jpg" alt="Another Image" className="w-full h-full object-cover" />
           </div>
         </motion.div>
 

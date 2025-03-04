@@ -14,7 +14,7 @@ const Projects = () => {
       title: 'Efficient Campus Navigation',
       description: 'A Smarter Way to Find Your Path at University of Vavuniya',
       tags: ['Python', 'Tkinter', 'PIL (Pillow)', 'ImageTk','Machine Learning','heapq','pandas','numpy'],
-      image: '/public/assets/Projects/p01.jpg',
+      image: '/assets/Projects/p01.jpg',
       link: 'https://github.com/DilmyPerera/Efficient-Campus-Navigation',
     },
     {
@@ -22,7 +22,7 @@ const Projects = () => {
       title: 'Taskflow Task Management System',
       description: 'askflow is an efficient and user-friendly task management system designed to help individuals and teams organize, track, and manage their tasks seamlessly.',
       tags: ['Node.js', 'Express.js', 'MongoDB', 'React', 'Redux', 'Material UI', 'JWT',],
-      image: '/public/assets/Projects/p02.png',
+      image: '/assets/Projects/p02.png',
       link: 'https://github.com/udaraKavishka/IT22242024taskflow',
     },
     {
