@@ -11,8 +11,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <h2 className="text-2xl font-bold text-primary-400 mb-2">Portfolio</h2>
             <p className="text-secondary-400 max-w-md">
-              Creating beautiful, functional, and responsive websites that help businesses grow and succeed online.
-            </p>
+            Showcasing my passion for technology, innovation, and problem-solving through impactful projects            </p>
           </div>
           
           <div className="flex flex-col items-center md:items-end">
