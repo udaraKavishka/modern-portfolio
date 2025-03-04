@@ -14,10 +14,10 @@ const Hero = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-4 text-secondary-900">
-                Hi, I'm <span className="text-primary-600">Your Name</span>
+                Hi, I'm <span className="text-primary-600">Udara Nalawansa</span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-medium mb-6 text-secondary-700">
-                Web Developer & Designer
+                Data Science Aspirant & Web Developer
               </h2>
               <p className="text-lg text-secondary-600 mb-8 max-w-lg">
                 I create beautiful, functional, and responsive websites that help businesses grow and succeed online.
@@ -47,13 +47,10 @@ const Hero = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative"
+              className="relative flex justify-center"
             >
-              <div className="w-full h-80 md:h-96 bg-primary-600 rounded-lg relative overflow-hidden">
-                {/* Replace with your actual image */}
-                <div className="absolute inset-0 flex items-center justify-center text-white text-xl">
-                  Your Profile Image
-                </div>
+              <div className="w-80 h-80 md:w-96 md:h-96 bg-primary-600 rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="/src/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-secondary-200 rounded-lg z-0"></div>
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary-200 rounded-lg z-0"></div>
