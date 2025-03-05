@@ -41,6 +41,14 @@ const Projects = () => {
       image: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
       link: ' https://github.com/udaraKavishka/movie_rating_prediction',
     },
+    {
+      id: 5,
+      title: 'Modern Portfolio',
+      description: 'A sleek, responsive, and modern portfolio website that showcases my passion for technology, innovation, and problem-solving through impactful projects.',
+      tags: ['React', 'Tailwind CSS', 'Framer Motion'],
+      image: '/assets/Projects/p05.jpg',
+      link: ' https://github.com/udaraKavishka/modern-portfolio',
+    },
   ];
 
   const containerVariants = {
