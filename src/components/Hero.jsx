@@ -4,7 +4,7 @@ import { Link as ScrollLink } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center bg-gradient-to-br from-primary-50 to-secondary-100">
+    <div className="min-h-screen flex items-center bg-gradient-to-br from-primary-50 to-secondary-100 pt-24 md:pt-32"> {/* Added pt-24 for mobile and pt-32 for larger screens */}
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Column - Text */}
