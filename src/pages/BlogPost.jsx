@@ -8,7 +8,6 @@ import '../markdown.css';
 
 const BlogPost = () => {
     const { id } = useParams();
-    console.log(id)
     const [content, setContent] = useState('');
     const post = postsData.posts.find(p => p.id === id);
 
@@ -43,15 +42,15 @@ const BlogPost = () => {
             transition={{ duration: 0.5 }}
             className="min-h-screen pt-16"
         >
-            <div className="relative h-96 bg-secondary-900">
+            <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] bg-secondary-900">
                 <img
                     src={post.coverImage}
                     alt={post.title}
-                    className="w-full h-full object-cover opacity-50"
+                    className="w-full h-full object-cover absolute inset-0"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                     <div className="container mx-auto px-4 text-center text-white">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
                         <div className="flex items-center justify-center space-x-4">
                             <span>•</span>
                             <span>{format(new Date(post.date), 'MMMM d, yyyy')}</span>
@@ -63,7 +62,7 @@ const BlogPost = () => {
             </div>
 
             <div className="container mx-auto px-4 py-12">
-                <div className=" markdown-content max-w-3xl mx-auto prose prose-lg">
+                <div className="markdown-content max-w-3xl mx-auto prose prose-lg">
                     <ReactMarkdown>{content}</ReactMarkdown>
                 </div>
             </div>
