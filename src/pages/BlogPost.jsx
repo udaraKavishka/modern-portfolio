@@ -52,12 +52,6 @@ const BlogPost = () => {
                     <div className="container mx-auto px-4 text-center text-white">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
                         <div className="flex items-center justify-center space-x-4">
-                            <img
-                                src={post.author.avatar}
-                                alt={post.author.name}
-                                className="w-10 h-10 rounded-full"
-                            />
-                            <span>{post.author.name}</span>
                             <span>•</span>
                             <span>{format(new Date(post.date), 'MMMM d, yyyy')}</span>
                             <span>•</span>

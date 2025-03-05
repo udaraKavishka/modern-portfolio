@@ -1,28 +1,12 @@
 {
     "posts": [
       {
-        "id": "post-01",
-        "title": "Getting Started with React: A Beginner's Guide",
-        "excerpt": "Learn the fundamentals of React and start building modern web applications.",
-        "coverImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3",
-        "date": "2023-10-15",
-        "readTime": "5 min read",
-        "author": {
-          "name": "John Doe",
-          "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3"
-        }
-      },
-      {
-        "id": "post-02",
-        "title": "Mastering CSS Grid: Modern Layout Techniques",
-        "excerpt": "Deep dive into CSS Grid and learn how to create complex layouts with ease.",
-        "coverImage": "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-4.0.3",
-        "date": "2023-10-10",
-        "readTime": "7 min read",
-        "author": {
-          "name": "Jane Smith",
-          "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3"
-        }
+        "id": "influencer-marketing-sri-lanka",
+        "title": "Unraveling the Influence: Exploring the Power and Pitfalls of Influencer Marketing in Sri Lanka’s Digital Sphere",
+        "coverImage": "/assets/blog/blog01/cover.jpg",
+        "date": "2024-04-11",
+        "readTime": "5 min read"
       }
+      
     ]
   }

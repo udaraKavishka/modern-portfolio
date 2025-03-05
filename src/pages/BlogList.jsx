@@ -40,13 +40,9 @@ const BlogList = () => {
                             </div>
                             <div className="p-6">
                                 <div className="flex items-center space-x-4 mb-4">
-                                    <img
-                                        src={post.author.avatar}
-                                        alt={post.author.name}
-                                        className="w-10 h-10 rounded-full"
-                                    />
+                                    
                                     <div>
-                                        <p className="text-secondary-900 font-medium">{post.author.name}</p>
+                                        
                                         <div className="flex items-center text-sm text-secondary-500">
                                             <span>{format(new Date(post.date), 'MMMM d, yyyy')}</span>
                                             <span className="mx-2">•</span>
@@ -57,9 +53,7 @@ const BlogList = () => {
                                 <h2 className="text-xl font-bold text-secondary-900 mb-2 hover:text-primary-600 transition-colors duration-300">
                                     {post.title}
                                 </h2>
-                                <p className="text-secondary-600 mb-4">
-                                    {post.excerpt}
-                                </p>
+                                
                                 <div className="flex items-center text-primary-600 font-medium">
                                     Read more
                                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
