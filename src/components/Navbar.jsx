@@ -1,16 +1,28 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Navbar = ({ scrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const navLinks = [
-    { name: 'Home', to: 'home' },
-    { name: 'About', to: 'about' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Contact', to: 'contact' },
-  ];
+  // Check if the current page is a blog page
+  const isBlogPage = location.pathname.startsWith('/blog');
+
+  // Navbar links configuration
+  const navLinks = isBlogPage
+    ? [
+        { name: 'Home', to: 'home', route: '/' },
+        { name: 'Blog', to: '/blog', route: '/blog' },
+      ]
+    : [
+        { name: 'Home', to: 'home', route: '/' },
+        { name: 'About', to: 'about', route: '/about' },
+        { name: 'Projects', to: 'projects', route: '/projects' },
+        { name: 'Contact', to: 'contact', route: '/contact' },
+        { name: 'Blog', to: '/blog', route: '/blog' },
+      ];
 
   return (
     <motion.nav
@@ -22,26 +34,35 @@ const Navbar = ({ scrolled }) => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <ScrollLink to="home" smooth={true} duration={500} className="cursor-pointer">
+        <Link to="/" className="cursor-pointer">
           <h1 className="text-2xl font-bold text-primary-600">Portfolio</h1>
-        </ScrollLink>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
-            <ScrollLink
-              key={link.name}
-              to={link.to}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              activeClass="active"
-              className="nav-link cursor-pointer"
-            >
-              {link.name}
-            </ScrollLink>
-          ))}
+          {navLinks.map((link) =>
+            link.route.startsWith('/') ? (
+              <Link
+                key={link.name}
+                to={link.route}
+                className="nav-link cursor-pointer"
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <ScrollLink
+                key={link.name}
+                to={link.to}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="nav-link cursor-pointer"
+              >
+                {link.name}
+              </ScrollLink>
+            )
+          )}
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -62,35 +83,6 @@ const Navbar = ({ scrolled }) => {
           </button>
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <motion.div
-          className="md:hidden bg-white shadow-lg absolute top-full left-0 right-0"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {navLinks.map((link) => (
-              <ScrollLink
-                key={link.name}
-                to={link.to}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                activeClass="active"
-                className="nav-link cursor-pointer"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </ScrollLink>
-            ))}
-          </div>
-        </motion.div>
-      )}
     </motion.nav>
   );
 };
