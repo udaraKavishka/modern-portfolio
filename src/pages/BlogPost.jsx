@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { format } from 'date-fns';
 import ReactMarkdown from 'react-markdown';
 import postsData from '../data/posts.json';
+import '../markdown.css';
 
 const BlogPost = () => {
     const { id } = useParams();
@@ -62,7 +63,7 @@ const BlogPost = () => {
             </div>
 
             <div className="container mx-auto px-4 py-12">
-                <div className="max-w-3xl mx-auto prose prose-lg">
+                <div className=" markdown-content max-w-3xl mx-auto prose prose-lg">
                     <ReactMarkdown>{content}</ReactMarkdown>
                 </div>
             </div>
