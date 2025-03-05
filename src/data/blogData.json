@@ -1,38 +1,78 @@
 [
-    {
-      "slug": "getting-started-with-react",
-      "title": "Getting Started with React: A Beginners Guide",
-      "coverImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "date": "2023-10-15",
-      "readTime": "5 min read",
-      "content": [
-        "<h2>Introduction to React</h2>",
-        "<p>React is a JavaScript library for building user interfaces. It was developed by Facebook and has become one of the most popular front-end libraries in the world.</p>",
-        "<h3>Why React?</h3>",
-        "<p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>",
-        "<h3>Getting Started</h3>",
-        "<p>To start with React, you'll need to have Node.js installed on your computer. Once you have Node.js, you can create a new React project using Create React App:</p>",
-        "<pre><code>npx create-react-app my-app\ncd my-app\nnpm start</code></pre>",
-        "<h3>Components</h3>",
-        "<p>Components are the building blocks of any React application. A component is a self-contained module that renders some output.</p>",
-        "<h3>Conclusion</h3>",
-        "<p>React is a powerful library that can help you build better web applications.</p>"
-      ]
-    },
-    {
-      "slug": "advanced-javascript-concepts",
-      "title": "Advanced JavaScript Concepts You Should Know",
-      "coverImage": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdl&auto=format&fit=crop&w=1470&q=80",
-      "date": "2023-12-05",
-      "readTime": "7 min read",
-      "content": [
-        "<h2>Understanding Closures</h2>",
-        "<p>Closures are functions that have access to their outer scope, even after the outer function has finished executing.</p>",
-        "<h3>Scope and Lexical Environment</h3>",
-        "<p>JavaScript has function scope and block scope. Closures leverage lexical scoping.</p>",
-        "<pre><code>function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst counter = outer();\ncounter(); // 1\ncounter(); // 2</code></pre>",
-        "<p>This is a closure in action.</p>"
-      ]
-    }
-  ]
-  
+  {
+    "slug": "influencer-marketing-sri-lanka",
+    "title": "Unraveling the Influence: Exploring the Power and Pitfalls of Influencer Marketing in Sri Lanka’s Digital Sphere",
+    "coverImage": "/assets/blog/blog01/cover.jpg",
+    "date": "2024-04-11",
+    "readTime": "10 min read",
+    "content": [
+        "<p> In today's digital age, our choices and preferences are heavily influenced by the individuals we follow on social media. From the latest gadgets to fashion trends, influencers wield significant power over their followers. This phenomenon is particularly pronounced in Sri Lanka, where influencer marketing has become a dominant force in shaping social norms.</p>",
+        "<p> Take, for instance, the case of Blok and Dino, two popular influencers whose promotion of a caffeinated drink, through a mere 7-minute video, led to a surge in its popularity. As someone who isn't typically drawn to caffeinated beverages, I found myself intrigued by their recommendation and decided to give it a try. This experience got me thinking about the nature of influencer marketing and its impact on consumer behavior.</p>",
+
+        "<h2> So, what exactly is influencer marketing? </h2>",
+
+        "<p> Simply put, it's a form of marketing where brands collaborate with individuals who have a strong online presence and a dedicated following to promote their products or services. The charm of influencer marketing lies in its ability to create a sense of authenticity and trust among consumers.</p>",
+
+        "<p> But what drives people to try new things solely based on influencer recommendations? The answer lies in the psychological concept of social proof. When we see someone, we admire or trust endorsing a product, we're more inclined to believe that it must be worth trying. Additionally, it creates a sense of <strong>FOMO (fear of missing out) </strong>and the belief that by adopting these products or behaviors, we can emulate their success and be part of their exclusive circle. This temptation to emulate our favorite influencers can lead us to step out of our comfort zones and explore new experiences.</p>",
+
+        "<p>The temptation that drives people to try new things beyond their current lifestyle is deeply rooted in human psychology and social dynamics. At its core, this temptation stems from our innate desire for social belonging and validation. When we see influencers, whom we admire and trust, promoting a product or lifestyle, it creates a sense of FOMO and the belief that by adopting these products or behaviors, we can emulate their success and be part of their exclusive circle. </p>",
+
+        "<p>However, the rise of influencer marketing also raises important questions about its impact. </p>",
+
+        "<img src=\"/assets/blog/blog01/img1.jpg\" alt=\"Influencer Marketing Example\"\">",
+
+        "<p> However, the rise of influencer marketing also raises important questions about its impact.</p>",
+
+        "<img src=\"/assets/blog/blog01/img2.jpg\" alt=\"Influencer Marketing Example\"\">",
+
+        "<h2>On the positive side: </h2>",
+
+        "<ul>",
+
+        "<li> <strong> Exploration and Discovery: </strong> Influencer marketing can introduce consumers to new products and experiences they may not have encountered otherwise. This can lead to personal growth and a broader perspective on lifestyle choices.</li>",
+
+        "<li> <strong> Engagement and Community Building: </strong> Following influencers creates a sense of community among like-minded individuals who share similar interests and preferences. This fosters a sense of belonging and connection, enhancing the overall social experience.</li>",
+
+        "<li> <strong> Brand Awareness and Trust: </strong> Influencers often act as brand ambassadors, promoting products they genuinely believe in. This can build trust among consumers, as they perceive the recommendations as authentic and reliable.</li>",
+
+
+        "</ul>",
+
+        "<img src=\"/assets/blog/blog03/img1.jpg\" alt=\"Influencer Marketing Example\"\">",
+
+
+        "<h2>But there are also  to consider:negative implications   to consider:</h2>",
+
+        "<ul>",
+        "<li> <strong> Unrealistic Expectations: </strong> Influencers often present curated versions of their lives, showcasing only the highlights and glamour. This can create unrealistic expectations among followers, leading to feelings of inadequacy and dissatisfaction with one's own life.</li>",
+
+        "<li> <strong> Impulse Purchases: </strong> The allure of influencer promotions can prompt impulsive buying behavior, leading consumers to make hasty decisions without thoroughly considering the product's value or necessity.</li>",
+
+        "<li> <strong> Ethical Concerns: </strong>Influencers may prioritize lucrative brand deals over genuine alignment with their values or their audience's best interests. This can erode trust and credibility, ultimately harming both the influencer's reputation and the brand's image.</li>",
+
+        "</ul>",
+
+        "<p> Looking ahead, the future of influencer marketing will likely see continued growth and evolution. Brands will need to adapt to changing consumer preferences and expectations by prioritizing authenticity, transparency, and ethical practices in their influencer partnerships. Additionally, advancements in technology, such as AI and virtual reality, may offer new avenues for influencer engagement and storytelling, further shaping the landscape of digital marketing. Ultimately, the success of influencer marketing will depend on its ability to balance commercial interests with genuine connection and value for consumers.</p>",
+
+        "<h2>In Conclusion  </h2>",
+
+        "<p>Influencer marketing has become a powerful force in shaping consumer behavior and driving purchasing decisions. While it offers numerous opportunities for brands and influencers alike, it's essential to approach it with a critical eye and consider its broader impact on society. As consumers, we have the power to make informed choices and hold both brands and influencers accountable for their actions.</p>"
+
+    ]
+  },
+  {
+    "slug": "advanced-javascript-concepts",
+    "title": "Advanced JavaScript Concepts You Should Know",
+    "coverImage": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdl&auto=format&fit=crop&w=1470&q=80",
+    "date": "2023-12-05",
+    "readTime": "7 min read",
+    "content": [
+      "<h2>Understanding Closures</h2>",
+      "<p>Closures are functions that have access to their outer scope, even after the outer function has finished executing.</p>",
+      "<h3>Scope and Lexical Environment</h3>",
+      "<p>JavaScript has function scope and block scope. Closures leverage lexical scoping.</p>",
+      "<pre><code>function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst counter = outer();\ncounter(); // 1\ncounter(); // 2</code></pre>",
+      "<p>This is a closure in action.</p>"
+    ]
+  }
+]
