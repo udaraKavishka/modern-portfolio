@@ -1,0 +1,38 @@
+[
+    {
+      "slug": "getting-started-with-react",
+      "title": "Getting Started with React: A Beginners Guide",
+      "coverImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "date": "2023-10-15",
+      "readTime": "5 min read",
+      "content": [
+        "<h2>Introduction to React</h2>",
+        "<p>React is a JavaScript library for building user interfaces. It was developed by Facebook and has become one of the most popular front-end libraries in the world.</p>",
+        "<h3>Why React?</h3>",
+        "<p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>",
+        "<h3>Getting Started</h3>",
+        "<p>To start with React, you'll need to have Node.js installed on your computer. Once you have Node.js, you can create a new React project using Create React App:</p>",
+        "<pre><code>npx create-react-app my-app\ncd my-app\nnpm start</code></pre>",
+        "<h3>Components</h3>",
+        "<p>Components are the building blocks of any React application. A component is a self-contained module that renders some output.</p>",
+        "<h3>Conclusion</h3>",
+        "<p>React is a powerful library that can help you build better web applications.</p>"
+      ]
+    },
+    {
+      "slug": "advanced-javascript-concepts",
+      "title": "Advanced JavaScript Concepts You Should Know",
+      "coverImage": "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdl&auto=format&fit=crop&w=1470&q=80",
+      "date": "2023-12-05",
+      "readTime": "7 min read",
+      "content": [
+        "<h2>Understanding Closures</h2>",
+        "<p>Closures are functions that have access to their outer scope, even after the outer function has finished executing.</p>",
+        "<h3>Scope and Lexical Environment</h3>",
+        "<p>JavaScript has function scope and block scope. Closures leverage lexical scoping.</p>",
+        "<pre><code>function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst counter = outer();\ncounter(); // 1\ncounter(); // 2</code></pre>",
+        "<p>This is a closure in action.</p>"
+      ]
+    }
+  ]
+  
