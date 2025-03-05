@@ -7,13 +7,14 @@ import postsData from '../data/posts.json';
 
 const BlogPost = () => {
     const { id } = useParams();
+    console.log(id)
     const [content, setContent] = useState('');
     const post = postsData.posts.find(p => p.id === id);
 
     useEffect(() => {
         const fetchContent = async () => {
             try {
-                const response = await fetch(`/src/data/posts/${id}.md`);
+                const response = await fetch(`/posts/${id}.md`);
                 const text = await response.text();
                 setContent(text);
             } catch (error) {
