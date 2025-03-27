@@ -8,24 +8,32 @@ const About = () => {
     threshold: 0.1,
   });
 
-  const programmingLanguages = [
-    'C++', 'Java', 'JavaScript', 'Python', 'PHP', 'Shell Script', 'HTML5', 'CSS3'
+  const dataAnalysis = [
+    'NumPy', 'Pandas', 'Python', 'Matplotlib', 'Power BI', 'Google Colab'
   ];
 
-  const frameworksAndLibraries = [
-    'React', 'Node.js', 'Express.js', 'Tailwind CSS', 'NumPy', 'Pandas', 'Matplotlib', 'Plotly'
+  const programmingLanguages = [
+    'Java', 'JavaScript', 'Python', 'HTML5', 'C++', 'Shell Script','TypeScript', 'Php'
+  ];
+
+  const frontendTechnology = [
+    'React.js', 'Next.js', 'Html', 'Tailwind CSS', 'ReactNative Mobile', 'Bootstrap', 'Material UI'
+  ];
+
+  const backendTechnology = [
+    'Node.js', 'Express.js', 'Python', 'Java'
   ];
 
   const databases = [
-    'MySQL', 'MongoDB', 'Oracle'
+    'MySQL', 'MongoDB','Firebase'
   ];
 
   const toolsAndTechnologies = [
-    'Git', 'NPM', 'Postman', 'Power Bi', 'JWT', 'Nodemon', 'Apache'
+    'Git','Github', 'NPM', 'Postman', 'VS Code', 'Jira', 'Huly','Trello','Jupyter Notebook'
   ];
 
   const designTools = [
-    'Adobe Illustrator', 'Adobe InDesign', 'Adobe Photoshop', 'Adobe Lightroom Classic', 'Canva'
+    'Adobe Illustrator', 'Adobe InDesign', 'Adobe Photoshop', 'Adobe Lightroom Classic', 'Canva', 'Figma', 'Axure RP','Adobe Premiere Pro', 'Adobe After Effects'
   ];
 
   const education = [
@@ -99,14 +107,14 @@ const About = () => {
     }
   ];
 
-
   const extracurricularActivities = [
     'Volunteer at local community events',
-    'Member of the university sports team',
+    'Member of the university Basketball sports team',
     'Photography and content creation',
-    'Designing posts and other creative materials ',
+    'Designing posts and other creative materials',
+    'Participating in hackathons and coding competitions',
+
   ];
-  
 
   return (
     <div className="container mx-auto px-4" ref={ref}>
@@ -120,88 +128,45 @@ const About = () => {
         <div className="w-20 h-1 bg-primary-600 mx-auto"></div>
       </motion.div>
 
-      <div className="flex flex-col items-center md:flex-row gap-12">
-        {/* Images Section on the Left */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col gap-4 items-center md:w-1/2"
-        >
-          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/assets/profile.jpg" alt="Your Image" className="w-full h-full object-cover" />
-          </div>
-          <div className="w-full md:w-80 h-80 bg-secondary-200 rounded-lg overflow-hidden">
-            <img src="/assets/profile2.jpg" alt="Another Image" className="w-full h-full object-cover" />
-          </div>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <h3 className="text-2xl font-bold mb-4 text-secondary-900">Who I Am</h3>
+        <p className="text-secondary-700 mb-6">
+          I'm Udara Kavishka Nalawansa, a dedicated student currently pursuing a Bachelor of Science in Information Technology at the University of Jaffna. Previously, I studied at St. Joseph's College, Colombo 10, where I built a strong academic foundation and a passion for continuous learning.
+        </p>
+        <p className="text-secondary-700 mb-6">
+          My focus lies in data analytics and data science, where I'm expanding my skills in database management, programming, and statistical analysis.
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="md:w-1/2"
-        >
-          <h3 className="text-2xl font-bold mb-4 text-secondary-900">Who I Am</h3>
-          <p className="text-secondary-700 mb-6">
-            I'm Udara Kavishka Nalawansa, a dedicated student currently pursuing a Bachelor of Science in Information Technology at the University of Jaffna. Previously, I studied at St. Joseph's College, Colombo 10, where I built a strong academic foundation and a passion for continuous learning.
-          </p>
-          <p className="text-secondary-700 mb-6">
-            My focus lies in data analytics and data science, where I'm expanding my skills in database management, programming, and statistical analysis.
-          </p>
-
-          <h3 className="text-2xl font-bold mb-4 text-secondary-900">My Skills</h3>
-          {/* Programming Languages */}
-          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Programming Languages</h4>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {programmingLanguages.map((skill, index) => (
-              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
-                {skill}
-              </span>
-            ))}
+        <h3 className="text-2xl font-bold mb-4 text-secondary-900">My Skills Based on Proficiency</h3>
+        {/* Skills Sections */}
+        {[
+          { title: 'Data Analytics & Visualization', skills: dataAnalysis },
+          { title: 'Programming Languages', skills: programmingLanguages },
+          { title: 'Frontend Technologies', skills: frontendTechnology },
+          { title: 'Backend Technologies', skills: backendTechnology },
+          { title: 'Databases', skills: databases },
+          { title: 'Tools & Technologies', skills: toolsAndTechnologies },
+          { title: 'Design Tools', skills: designTools }
+        ].map((section, index) => (
+          <div key={index} className="mb-6">
+            <h4 className="text-xl font-semibold text-secondary-800 mb-2">{section.title}</h4>
+            <div className="flex flex-wrap gap-2">
+              {section.skills.map((skill, skillIndex) => (
+                <span
+                  key={skillIndex}
+                  className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
-
-          {/* Frameworks & Libraries */}
-          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Frameworks & Libraries</h4>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {frameworksAndLibraries.map((skill, index) => (
-              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
-                {skill}
-              </span>
-            ))}
-          </div>
-
-          {/* Databases */}
-          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Databases</h4>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {databases.map((skill, index) => (
-              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
-                {skill}
-              </span>
-            ))}
-          </div>
-
-          {/* Tools & Technologies */}
-          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Tools & Technologies</h4>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {toolsAndTechnologies.map((skill, index) => (
-              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
-                {skill}
-              </span>
-            ))}
-          </div>
-
-          {/* Design Tools */}
-          <h4 className="text-xl font-semibold text-secondary-800 mb-2">Design Tools</h4>
-          <div className="flex flex-wrap gap-2 mb-6">
-            {designTools.map((skill, index) => (
-              <span key={index} className="px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium">
-                {skill}
-              </span>
-            ))}
-          </div>
-        </motion.div>
-      </div>
+        ))}
+      </motion.div>
 
       {/* Education Section */}
       <motion.div
@@ -213,12 +178,13 @@ const About = () => {
         <h3 className="text-2xl font-bold mb-4 text-secondary-900">Education</h3>
         <div className="space-y-4">
           {education.map((edu, index) => (
-            <div key={index} className="flex flex-col md:flex-row justify-between items-start bg-primary-50 p-4 rounded-lg shadow-md">
-              <div className="flex flex-col">
-                <span className="font-semibold text-secondary-900">{edu.degree}</span>
-                <span className="text-secondary-700">{edu.institution}</span>
-                <span className="text-secondary-500">{edu.year}</span>
-              </div>
+            <div
+              key={index}
+              className="bg-primary-50 p-4 rounded-lg shadow-md"
+            >
+              <span className="font-semibold text-secondary-900 block">{edu.degree}</span>
+              <span className="text-secondary-700 block">{edu.institution}</span>
+              <span className="text-secondary-500">{edu.year}</span>
             </div>
           ))}
         </div>
@@ -234,12 +200,13 @@ const About = () => {
         <h3 className="text-2xl font-bold mb-4 text-secondary-900">Clubs and Societies</h3>
         <div className="space-y-4">
           {clubsAndSocieties.map((club, index) => (
-            <div key={index} className="flex flex-col md:flex-row justify-between items-start bg-primary-50 p-4 rounded-lg shadow-md">
-              <div className="flex flex-col">
-                <span className="font-semibold text-secondary-900">{club.name}</span>
-                <span className="text-secondary-700">{club.role}</span>
-                <span className="text-secondary-500">{club.description}</span>
-              </div>
+            <div
+              key={index}
+              className="bg-primary-50 p-4 rounded-lg shadow-md"
+            >
+              <span className="font-semibold text-secondary-900 block">{club.name}</span>
+              <span className="text-secondary-700 block">{club.role}</span>
+              <span className="text-secondary-500">{club.description}</span>
             </div>
           ))}
         </div>

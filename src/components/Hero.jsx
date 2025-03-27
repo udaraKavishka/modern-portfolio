@@ -4,17 +4,17 @@ import { Link as ScrollLink } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <div className="min-h-screen flex items-center bg-gradient-to-br from-primary-50 to-secondary-100 pt-24 md:pt-32"> {/* Added pt-24 for mobile and pt-32 for larger screens */}
+    <div className="min-h-screen flex items-center bg-gradient-to-br from-primary-50 to-secondary-100 pt-20 md:pt-32">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           {/* Left Column - Text */}
-          <div className="md:w-1/2 mb-10 md:mb-0">
+          <div className="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-secondary-900">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-secondary-900">
                 Hi, I'm <span className="text-primary-600">Udara Nalawansa</span>
               </h1>
               <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 text-secondary-700">
@@ -59,8 +59,10 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-secondary-200 rounded-lg z-0"></div>
-              <div className="absolute -top-6 -left-6 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-primary-200 rounded-lg z-0"></div>
+              {/* Bottom-right rectangle */}
+              <div className="absolute bottom-2 right-2 hidden sm:block sm:-bottom-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-secondary-200 rounded-lg z-0"></div>
+              {/* Top-left rectangle */}
+              <div className="absolute -top-4 -left-4 hidden sm:block w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-primary-200 rounded-lg z-0"></div>
             </motion.div>
           </div>
         </div>
