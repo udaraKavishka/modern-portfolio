@@ -6,6 +6,13 @@
         "coverImage": "/assets/blog/blog01/cover.jpg",
         "date": "2024-04-11",
         "readTime": "5 min read"
+      },
+      {
+        "id": "devsprint-2025-university-of-vavuniya",
+        "title": "Devsprint 2025: A Day of Learning, Innovation, and Community",
+        "coverImage": "/assets/blog/blog02/blog2.jpg",
+        "date": "2025-05-05",
+        "readTime": "7 min read"
       }
       
     ]
