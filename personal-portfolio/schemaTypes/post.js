@@ -9,6 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required().max(120),
     }),
     defineField({
       name: 'slug',
@@ -18,20 +19,30 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: {type: 'author'},
+      to: [{type: 'author'}],
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Main Image',
       type: 'image',
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
+      name: 'readTime',
+      title: 'Estimated Read Time',
+      type: 'string',
+      description: 'e.g., 5 min read',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'categories',
@@ -41,13 +52,15 @@ export default defineType({
     }),
     defineField({
       name: 'publishedAt',
-      title: 'Published at',
+      title: 'Published At',
       type: 'datetime',
+      validation: Rule => Rule.required(),
     }),
     defineField({
       name: 'body',
-      title: 'Body',
+      title: 'Content',
       type: 'blockContent',
+      validation: Rule => Rule.required(),
     }),
   ],
 
@@ -59,7 +72,10 @@ export default defineType({
     },
     prepare(selection) {
       const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
+      return {
+        ...selection,
+        subtitle: author ? `by ${author}` : '',
+      }
     },
   },
 })
