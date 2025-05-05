@@ -12,28 +12,27 @@ const BlogList = () => {
         const fetchPosts = async () => {
             try {
                 const data = await client.fetch(`*[_type == "post"] | order(publishedAt desc){
-                    _id,
-                    title,
-                    slug,
-                    readTime,
-                    publishedAt,
-                    category->{
-                        title
-                    },
-                    mainImage {
-                        asset -> {
-                        url
-                        }
-                    },
-                    body[]{
-                        ...,
-                        asset->{
-                            _id,
-                            url
-                        }
-                        }
-                    }
-                    }`);
+  _id,
+  title,
+  slug,
+  readTime,
+  publishedAt,
+  mainImage {
+    asset -> {
+      url
+    }
+  },
+  body[]{
+    ...,
+    _type == "image" => {
+      ...,
+      asset->{
+        _id,
+        url
+      }
+    }
+  }
+}`);
                 setPosts(data);
             } catch (error) {
                 console.error('Error fetching posts from Sanity:', error);
