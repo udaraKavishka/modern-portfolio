@@ -56,7 +56,7 @@ function App() {
 
         {/* Blog Pages */}
         <Route path="/blog" element={<BlogList />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
 
         {/* 404 Page */}
         <Route path="*" element={<NotFound />} />
