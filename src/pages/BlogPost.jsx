@@ -2,34 +2,61 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
-import ReactMarkdown from 'react-markdown';
-import postsData from '../data/posts.json';
+import { client, urlFor } from '../sanity';
+import { PortableText } from '@portabletext/react';
 import '../markdown.css';
 
 const BlogPost = () => {
-    const { id } = useParams();
-    const [content, setContent] = useState('');
-    const post = postsData.posts.find(p => p.id === id);
+    const { slug } = useParams();
+    const [post, setPost] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchContent = async () => {
-            try {
-                const response = await fetch(`/posts/${id}.md`);
-                const text = await response.text();
-                setContent(text);
-            } catch (error) {
-                console.error('Error loading blog post:', error);
-            }
-        };
+        client.fetch(
+            `*[_type == "post" && slug.current == $slug][0]{
+                title,
+                publishedAt,
+                readTime,
+                mainImage {
+                    asset->{url}
+                },
+                body
+            }`,
+            { slug }
+        ).then((data) => {
+            setPost(data);
+            setLoading(false);
+        }).catch((error) => {
+            console.error('Error fetching post:', error);
+            setLoading(false);
+        });
+    }, [slug]);
 
-        if (post) {
-            fetchContent();
+    const components = {
+        types: {
+            image: ({ value }) => (
+                value?.asset && (
+                    <img
+                        src={urlFor(value).width(800).url()}
+                        alt={value.alt || 'Blog image'}
+                        className="rounded-lg my-6 shadow-md"
+                    />
+                )
+            )
         }
-    }, [id]);
+    };
+
+    if (loading) {
+        return (
+            <div className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-xl">Loading...</h1>
+            </div>
+        );
+    }
 
     if (!post) {
         return (
-            <div className="container mx-auto px-4 py-16">
+            <div className="container mx-auto px-4 py-16 text-center">
                 <h1 className="text-2xl font-bold">Post not found</h1>
             </div>
         );
@@ -44,16 +71,16 @@ const BlogPost = () => {
         >
             <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] bg-secondary-900">
                 <img
-                    src={post.coverImage}
+                    src={post.mainImage?.asset?.url}
                     alt={post.title}
                     className="w-full h-full object-cover absolute inset-0"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                     <div className="container mx-auto px-4 text-center text-white">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{post.title}</h1>
-                        <div className="flex items-center justify-center space-x-4">
+                        <div className="flex items-center justify-center space-x-4 text-sm sm:text-base">
                             <span>•</span>
-                            <span>{format(new Date(post.date), 'MMMM d, yyyy')}</span>
+                            <span>{format(new Date(post.publishedAt), 'MMMM d, yyyy')}</span>
                             <span>•</span>
                             <span>{post.readTime}</span>
                         </div>
@@ -63,7 +90,7 @@ const BlogPost = () => {
 
             <div className="container mx-auto px-4 py-12">
                 <div className="markdown-content max-w-3xl mx-auto prose prose-lg">
-                    <ReactMarkdown>{content}</ReactMarkdown>
+                    <PortableText value={post.body} components={components} />
                 </div>
             </div>
         </motion.article>

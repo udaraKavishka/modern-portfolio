@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@formspree/react": "^2.5.4",
+    "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^7.0.0",
+    "@sanity/image-url": "^1.1.0",
     "@tailwindcss/typography": "^0.5.16",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
