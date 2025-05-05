@@ -74,5 +74,49 @@
       "<pre><code>function outer() {\n  let count = 0;\n  return function inner() {\n    count++;\n    console.log(count);\n  };\n}\nconst counter = outer();\ncounter(); // 1\ncounter(); // 2</code></pre>",
       "<p>This is a closure in action.</p>"
     ]
+  },
+  {
+    "slug": "devsprint-2025-university-of-vavuniya",
+    "title": "Devsprint 2025: A Day of Learning, Innovation, and Community",
+    "coverImage": "/assets/blog/blog02/blog2.jpg",
+    "date": "2025-05-05",
+    "readTime": "7 min read",
+    "content": [
+      "<p>Recently, I had the opportunity to participate in <strong>Devsprint 2025</strong>, an insightful and well-organized event hosted by the <strong>IEEE Women in Engineering (WIE) Student Branch Affinity Group</strong> of the <strong>University of Vavuniya</strong>, in collaboration with <strong>GitHub Education</strong> and <strong>WSO2</strong>. The event took place at the Faculty of Applied Science and was structured around three parallel technical sessions, each held in a different lecture hall. The topics were carefully chosen to reflect key areas in today's tech landscape: <strong>Artificial Intelligence</strong>, <strong>Cloud Computing</strong>, and <strong>Mobile App Development</strong>.</p>",
+      
+      "<h2>Keynote Session: Making Yourself Memorable</h2>",
+      "<p>The day began with a keynote address by <strong>Suvin Nimnaka</strong>, a Senior Software Engineer at WSO2. His session, titled <em>\"Making Yourself Memorable,\"</em> resonated deeply with the audience. One of the most impactful takeaways for me was the reminder that having a degree in IT—while valuable—is no longer sufficient on its own. With thousands of undergraduates graduating every year from both state and private universities, the differentiating factor often lies in how individuals present themselves and contribute meaningfully to their field.</p>",
+      "<p>Suvin emphasized several strategies to stand out:</p>",
+      "<ul>",
+        "<li><strong>Develop fluency in your chosen domain</strong></li>",
+        "<li><strong>Participate in hackathons</strong> not just to compete, but to enjoy and learn</li>",
+        "<li><strong>Get involved in tech communities</strong> and actively participate in developer events and meetups</li>",
+      "</ul>",
+      "<p>These points reinforced the importance of continuous learning, networking, and the drive to make a lasting impression in the industry.</p>",
+
+      "<h2>Diving into AI: Insights and Hands-on Learning</h2>",
+      "<p>I chose to attend the <strong>Artificial Intelligence</strong> track, which was conducted by <strong>Lakindu Kariyawasam</strong> (Software Engineer Intern at WSO2) and <strong>Avin Indrasoma</strong> (GitHub Campus Expert). Their session offered a comprehensive and beginner-friendly dive into how modern AI systems function under the hood.</p>",
+      "<p>Lakindu opened the session by breaking down the technical fundamentals, including:</p>",
+      "<ul>",
+        "<li>How tokenization works in large language models (LLMs)</li>",
+        "<li>The mechanics of prompt engineering</li>",
+        "<li>A high-level overview of transformer architecture</li>",
+        "<li>An introduction to configuring model output using parameters</li>",
+      "</ul>",
+      "<p>Following this, Avin led a hands-on session where we built a small application using <strong>Gemini 2.5 Flash AI</strong> on <strong>Google Colab</strong>. The project involved generating a recipe based on user-provided ingredients, showcasing how AI can be integrated into practical, real-world tools.</p>",
+
+      "<h2>AMA Session: Knowledge Sharing and Community Spirit</h2>",
+      "<p>To conclude the event, a Q&A session was held with all the speakers. It was a great opportunity for attendees to clarify doubts, ask about career paths, and dig deeper into the topics covered during the sessions. The discussions were engaging and highlighted the speakers' commitment to sharing knowledge and fostering curiosity.</p>",
+
+      "<h2>Acknowledgements</h2>",
+      "<p>I would like to extend my sincere thanks to the <strong>IEEE WIE Student Branch Affinity Group</strong> of the <strong>University of Vavuniya</strong> for organizing this inspiring event. Special recognition goes to <strong>Neranjana Persad</strong> for building connections through the <strong>Google Developer Community</strong> and helping bring together such a talented group of speakers.</p>",
+      "<p>Thank you to:</p>",
+      "<ul>",
+        "<li><strong>Suvin Nimnaka</strong> for the thought-provoking keynote</li>",
+        "<li><strong>Lakindu Kariyawasam</strong> and <strong>Avin Indrasoma</strong> for the AI session</li>",
+        "<li><strong>Chamod Shehanka</strong>, Community Lead and Organizer at <strong>GDG Sri Lanka</strong>, for his support</li>",
+      "</ul>",
+      "<p>Devsprint was more than just a technical event. It was a celebration of collaboration, learning, and the spirit of community in tech. I look forward to more opportunities like this to grow, contribute, and connect.</p>"
+    ]
   }
 ]
